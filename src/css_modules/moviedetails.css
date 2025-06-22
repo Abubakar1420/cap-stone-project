@@ -1,0 +1,180 @@
+/* moviedetails.css */
+
+.details-page {
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  background-color: #121212;
+  min-height: 100vh;
+}
+
+.backdrop {
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.poster img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+.info {
+  flex: 1;
+  padding-top: 10px;
+}
+
+.info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.info span {
+  color: #aaa;
+  font-size: 1.2rem;
+}
+
+.info p {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.info strong {
+  color: #ffcc00;
+}
+
+.info button {
+  margin: 12px 8px 12px 0;
+  padding: 10px 18px;
+  background-color: #f04f4f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.info button:hover:not(:disabled) {
+  background-color: #d13a3a;
+}
+
+.info button:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+}
+
+.trailer {
+  margin-top: 30px;
+}
+
+.trailer iframe {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+.similar-section {
+  padding: 40px 20px;
+  background-color: #1e1e1e;
+}
+
+.similar-section h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.similar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+}
+
+.similar-card {
+  background-color: #2c2c2c;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: #eee;
+  transition: transform 0.2s;
+}
+
+.similar-card:hover {
+  transform: scale(1.03);
+}
+
+.similar-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.similar-card p {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .overlay {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .poster img {
+    width: 200px;
+  }
+
+  .info h1 {
+    font-size: 2rem;
+  }
+
+  .info {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .poster img {
+    width: 160px;
+  }
+
+  .info h1 {
+    font-size: 1.6rem;
+  }
+
+  .similar-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .poster img {
+    width: 120px;
+  }
+
+  .info h1 {
+    font-size: 1.4rem;
+  }
+
+  .info button {
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  .similar-card p {
+    font-size: 0.9rem;
+  }
+}

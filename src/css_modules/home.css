@@ -1,0 +1,192 @@
+/* src/pages/home.css */
+
+.home-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 1rem;
+  color: #222;
+  background-color: #f9f9f9;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  background: linear-gradient(to right, #1c1c1c, #333);
+  color: white;
+  padding: 2rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #555;
+}
+
+.btn-secondary:hover {
+  background-color: #333;
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 300px;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Carousel Section */
+.carousel-section,
+.genre-slider,
+.cta-section {
+  margin-bottom: 2.5rem;
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.scroll-card {
+  flex: 0 0 auto;
+  width: 140px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.scroll-card:hover {
+  transform: scale(1.05);
+}
+
+.scroll-card img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.genre-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 1rem 0;
+}
+
+.genre-button {
+  flex: 0 0 auto;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+}
+
+.genre-button:hover {
+  background-color: #2980b9;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  color: #555;
+}
+
+/* Scrollbar Styling */
+.scroll-container::-webkit-scrollbar,
+.genre-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+.scroll-container::-webkit-scrollbar-thumb,
+.genre-scroll::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-image {
+    max-width: 100%;
+  }
+
+  .scroll-card {
+    width: 120px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}

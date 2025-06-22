@@ -1,0 +1,123 @@
+/* watchlater.css */
+
+.watchlater-layout {
+  display: flex;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard-menu {
+  background-color: #f5f5f5;
+  width: 220px;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-right: 1px solid #ddd;
+}
+
+.dashboard-menu a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.dashboard-menu a:hover {
+  background-color: #e6e6e6;
+}
+
+.watch-later-container {
+  flex: 1;
+  padding: 2rem;
+  background-color: #ffffff;
+  overflow-y: auto;
+}
+
+.watch-later-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.movie-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.movie-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.movie-card h3 {
+  font-size: 16px;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.movie-card p {
+  margin: 0.25rem 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.movie-card button {
+  margin-top: 0.5rem;
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.movie-card button:hover {
+  background-color: #0056b3;
+}
+
+.no-image {
+  background-color: #ccc;
+  color: #fff;
+  font-size: 14px;
+  padding: 60px 0;
+  border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .watchlater-layout {
+    flex-direction: column;
+  }
+
+  .dashboard-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .dashboard-menu a {
+    padding: 0.5rem 1rem;
+  }
+
+  .watch-later-container {
+    padding: 1rem;
+  }
+}
